@@ -12,7 +12,7 @@ A password generator built with Node.js, Express.js, and EJS templates.
 
 ## Getting Started
 
-Instructions on setting up and running your Node.js app.
+Instructions on setting up and running the Node.js app.
 
 ### Prerequisites
 
@@ -23,7 +23,7 @@ List the software and tools that users need to have installed before they can us
 
 ### Installation
 
-A step-by-step guide on how to install your application.
+A step-by-step guide on how to install the application.
 
 1. Clone the repository:
 
