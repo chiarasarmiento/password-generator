@@ -1,0 +1,31 @@
+<p>Created by Chiara Sarmiento</p>
+        </div>
+        <script>
+            var slider = document.getElementById("lengthRange");
+            var output = document.getElementById("counter");
+            var copyBtn = document.getElementById("copybtn");
+
+            output.innerHTML = slider.value;
+            
+            slider.oninput = function() {
+              output.innerHTML = this.value;
+            }
+
+            function copyPassword() {
+            // Get the text field
+            var copyText = document.getElementById("thePassword");
+
+            // Select the text field
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy the text inside the text field
+            navigator.clipboard.writeText(copyText.value);
+            
+            // Alert the copied text
+            copyBtn.innerHTML = '<i class="fa fa-check" aria-hidden="true"></i>';
+          }
+        </script>
+    </body>
+
+</html>

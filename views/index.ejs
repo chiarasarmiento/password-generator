@@ -1,0 +1,54 @@
+<%- include("partials/header.ejs") %>
+    <div class="container">
+            <h1>Password Generator</h1>
+
+                <div class="password"> 
+                     <input type="text" id="thePassword" value="<%= (locals.generated_password) ? generated_password : 'PA$$WORD' %>" disabled>
+
+                     <% if (locals.generated_password) { %>
+                        <button onclick="copyPassword()" id="copybtn"><i class="fa fa-clone" aria-hidden="true"></i></button> 
+                     <% } %>
+                     
+                </div>
+
+               
+                <div class="box">
+                    <form action="/submit" method="POST">
+                        <label>Length</label>
+                        <div class="slidecontainer">
+                            <input type="range" name="length" min="4" max="20" value="10" class="slider" id="lengthRange">
+                            <p><span id="counter"></span></p>
+                        </div>
+
+                        <% if (locals.password_error) { %>
+                            <% if (password_error == true) { %>
+                            <p>Please check at least one of the boxes.</p>
+                            <% } %>   
+                        <% } %>
+
+                        <div class="field-box">
+                            <input type="checkbox" class="css-checkbox" name="numbers" id="numbers" checked> 
+                            <label for="numbers"><span class="checkbox-lbl">Numbers</span></label>
+                        </div>
+                        
+                        
+                        <div class="field-box">
+                            <input type="checkbox" class="css-checkbox" name="symbols" id="symbols" checked>
+                            <label for="symbols"><span class="checkbox-lbl">Symbols</span></label>
+                        </div>
+                        <div class="field-box">
+                            <input type="checkbox" class="css-checkbox" name="lowercase" id="lowercase" checked>
+                            <label for="lowercase"><span class="checkbox-lbl">Lowercase</span></label>
+                        </div>
+                        <div class="field-box">
+                            <input type="checkbox" class="css-checkbox" name="uppercase" id="uppercase" checked>
+                            <label for="uppercase"><span class="checkbox-lbl">Uppercase</span></label>
+                        </div>
+                    
+                        <div class="field-box">
+                            <input type="submit" id="btn" value="Generate">
+                        </div>
+                    </form>
+    </div>
+<%- include("partials/footer.ejs") %>                
+                

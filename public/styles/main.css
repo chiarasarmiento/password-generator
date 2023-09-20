@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'JetBrains Mono', monospace;
+    -webkit-text-size-adjust: 100%;
+}
+body{
+    background-color: #0e0d12;
+    color: #ffea00;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.box {
+    background: #001523;
+    padding: 40px;
+    width: 300px;
+}
+input#thePassword {
+    background: none;
+    border: 0;
+    font-size: 20px;
+    color: #ffea00;
+}
+.password{
+    background: #001523;
+    padding: 40px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+#copybtn {
+  background: none;
+  color: #ffea00;
+  border: 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+span.noPass {
+    color: gray;
+}
+.slidecontainer {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background: #002137;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #ffea00;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #ffea00;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input#btn {
+    background: #ffea00;
+    border: 3px solid #ffea00;
+    padding: 15px;
+    width: 100%;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+input#btn:hover{
+    background: none;
+    border: 3px solid #ffea00;
+    transition: 0.5s;
+    color: #ffea00;
+}
+.css-checkbox {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+   }
+ 
+.css-checkbox + label {
+    position: relative;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+   .css-checkbox + label::before {
+    content: " ";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 3px;
+    width: 15px;
+    height: 15px;
+    background-color: #ffea00;
+    box-shadow: none;
+   }
+   .css-checkbox:checked + label::after {
+    content: "✔";
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+    background-color: transparent;
+    font-size: 15px;
+    height: 20px;
+    width: 15px;
+    color: #002137;
+   }
+   .checkbox-lbl{
+    margin-left: 10px;
+   }
+@media (max-width: 440px){
+    .password, .box {
+        width: 70%;
+        padding:20px;
+    }
+    h1 {
+        font-size: 25px;
+    }
+    input#thePassword{
+        font-size: unset;
+    }
+}
