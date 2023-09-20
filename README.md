@@ -5,9 +5,6 @@
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## About
 
@@ -42,11 +39,11 @@ A step-by-step guide on how to install your application.
    
 4. Install dependencies:
    
-  ```bash
-  npm install
-  ```
+   ```bash
+   npm install
+   ```
 
-##Usage
+## Usage
 
   Run the app:
   
